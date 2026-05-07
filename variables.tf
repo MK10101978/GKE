@@ -2,7 +2,7 @@
 # Project
 # ─────────────────────────────────────────────────────
 variable "project_id" {
-  description = "The GCP project ID where all resources will be created."
+  description = "The GCP project ID where all resources will be created in this project"
   type        = string
 }
 
