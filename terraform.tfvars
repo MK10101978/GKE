@@ -3,7 +3,7 @@
 # ─────────────────────────────────────────────────────────────────
 
 # ── Project ──────────────────────────────────────────────────────
-project_id = "astral-digit-488514-q1 # <-- REQUIRED: replace with your GCP project ID
+project_id = "astral-digit-488514-q1" # <-- REQUIRED: replace with your GCP project ID
 region     = "us-central1"
 zones      = ["us-central1-a", "us-central1-b", "us-central1-c"]
 
