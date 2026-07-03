@@ -38,6 +38,11 @@ initial_node_count = 1             # per zone at creation time
 min_node_count     = 1             # autoscaler minimum per zone
 max_node_count     = 3             # autoscaler maximum per zone
 
+# ── Application Service Account ───────────────────────────────────
+app_sa_account_id = "svc-app-deployment" # GCP service account name
+wi_k8s_namespace  = "default"            # Kubernetes namespace for Workload Identity
+wi_k8s_sa_name    = "app-ksa"            # Kubernetes service account name
+
 # ── Labels ────────────────────────────────────────────────────────
 labels = {
   environment = "dev"

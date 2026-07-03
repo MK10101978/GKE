@@ -39,3 +39,8 @@ output "kubectl_config_command" {
   description = "Run this command to configure kubectl for the cluster."
   value       = "gcloud container clusters get-credentials ${google_container_cluster.primary.name} --region ${var.region} --project ${var.project_id}"
 }
+
+output "app_service_account_email" {
+  description = "Email of the application service account used by GKE workloads (Workload Identity)."
+  value       = google_service_account.app_sa.email
+}

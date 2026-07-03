@@ -141,6 +141,27 @@ variable "max_node_count" {
 }
 
 # ─────────────────────────────────────────────────────
+# Application Service Account
+# ─────────────────────────────────────────────────────
+variable "app_sa_account_id" {
+  description = "Account ID for the application service account used by GKE workloads."
+  type        = string
+  default     = "svc-app-deployment"
+}
+
+variable "wi_k8s_namespace" {
+  description = "Kubernetes namespace of the service account that will use Workload Identity."
+  type        = string
+  default     = "default"
+}
+
+variable "wi_k8s_sa_name" {
+  description = "Kubernetes service account name that will impersonate the GCP app service account."
+  type        = string
+  default     = "app-ksa"
+}
+
+# ─────────────────────────────────────────────────────
 # Labels
 # ─────────────────────────────────────────────────────
 variable "labels" {
