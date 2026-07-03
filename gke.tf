@@ -49,9 +49,10 @@ resource "google_project_iam_member" "gke_sa_artifact_registry" {
 resource "google_container_cluster" "primary" {
   provider = google-beta
 
-  name     = var.cluster_name
-  location = var.region # regional cluster → HA control plane
-  project  = var.project_id
+  name                = var.cluster_name
+  location            = var.region # regional cluster → HA control plane
+  project             = var.project_id
+  deletion_protection = false
 
   # We manage the node pool separately; remove the default one.
   remove_default_node_pool = true
